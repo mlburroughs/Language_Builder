@@ -5,14 +5,14 @@ verb trainer
 Author: Michelle Burroughs
 
 """
-verbs = {'aider': 'help', 'avaler': 'swallow', 'avancer': 'advance', 'baisser': 'lower', 'se battre': 'fight', 'bruler': 'burn', 'donner': 'give', 'pleurer': 'rain'}
+
 
 def verbTrainer(verb_list):
 
     import random
 
     # Welcome to User
-    print("Bienvenue a Verb S'entrainer")
+    print("Bienvenue a Verb S'entrainer, there are " + str(len(verb_list)) + " verbs in the system.")
     print("Type exit or stop to discontinue")
     print()
 
@@ -70,5 +70,3 @@ def verbTrainer(verb_list):
 
     return grade
 
-
-verbTrainer(verbs)
