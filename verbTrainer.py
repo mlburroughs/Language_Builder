@@ -1,6 +1,6 @@
 """
 
-verb trainer
+Verb trainer
 
 Author: Michelle Burroughs
 
@@ -18,7 +18,7 @@ def verbTrainer(verb_list):
 
     # User inputs numbers of verbs to test
     verb_num = input('Please enter desired number of verbs to test: ')
-    print('You will complete ' + str(verb_num) + " exercises")
+
     print()
     # stop exercise control
     if verb_num == 'exit' or verb_num == 'stop':
@@ -26,6 +26,7 @@ def verbTrainer(verb_list):
         return
     else:
         verb_num = int(verb_num)
+        print('You will complete ' + str(verb_num) + " exercises")
 
     # initialized parameters
     correct_response = 0
@@ -66,7 +67,7 @@ def verbTrainer(verb_list):
             response_array.append(test_verb)
 
     grade = (correct_response/verb_num) * 100
-    print('All set. Your score is ' + str(grade) + "percent. Tout a l'heure")
+    print('All set. Your score is ' + str(grade) + " percent. Tout a l'heure")
 
     return grade
 

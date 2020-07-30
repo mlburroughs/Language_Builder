@@ -1,10 +1,10 @@
-'''
-Verb list
-Author: Michelle Burroughs
-'''
 
-verbs = {'accourir': 'come running', 'acheter': 'buy', 'adorer': 'love', 'aider': 'help', 'aimer': 'like',
-         'ajouter':'add', 'aller': 'go', 'arriver': 'arriver', 'apercevoir': 'perceive', 'arreter': 'stop',
+'accourir', 'come running',
+'acheter', 'buy',
+'adorer', 'love',
+'aider', 'help',
+'aimer', 'like',
+         'ajouter','add', 'aller': 'go', 'arriver': 'arriver', 'apercevoir': 'perceive', 'arreter': 'stop',
          'apporter': 'bring', 'apprendre': 'learn', 'attendre': 'watch', 'accuellir': 'welcome', 'annuler': 'cancel',
          'asseoir': 'sit', 'avaler': 'swallow', 'avancer': 'advance', 'avoir': 'have', 'avouer': 'confess',
          'appeler': 'call', 'allumer': 'light', 'accepter': 'accept', 'ameliorer': 'improve', 'analyser': 'analyse',
