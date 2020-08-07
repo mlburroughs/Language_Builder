@@ -1,6 +1,6 @@
 """
 
-Verb trainer
+Verb trainer: Function to randomize verb list into a flash card function
 
 Author: Michelle Burroughs
 
