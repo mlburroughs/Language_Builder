@@ -387,7 +387,7 @@ def pastParticipe(inf, type):
     if type == "er":
         pp = inf[:-1]
 
-    if type == "irreg_erstem":
+    if type == "irreg_restem":
         pp = inf[:-1]
 
     if type == "ir":
@@ -411,7 +411,7 @@ irregpp = {'acquerir': 'acquis','apprendre': 'appris','atteindre': 'atteint', 'a
            'vivre': 'vecu', 'voir': 'vu', 'vouloir': 'voulu'}
 
 def imparfaitTense(inf, type):
-    if type == "er" or "ir" or "re" or "model" or "irreg_er" or "irreg_oir" or "irreg_ir" or "irreg_erstem":
+    if type == "er" or "ir" or "re" or "model" or "irreg_er" or "irreg_oir" or "irreg_ir" or "irreg_restem":
         root = inf[:-2]
         je = root + "ais"
         tu = root + "ais"
@@ -499,7 +499,7 @@ def imparfaitTense(inf, type):
     return je, tu, il_elle, nous, vous, ils_elles
 
 
-def futurprocheTense(inf, type):
+def futurprocheTense(inf):
     first = presentTense("aller", "irreg")
     je = first[0] + " " + inf
     tu = first[1] + " " + inf
@@ -513,7 +513,7 @@ def futurprocheTense(inf, type):
 
 def futurTense(inf, type):
 
-    if type == "er" or "ir" or "re" or "model" or "irreg_er" or "irreg_oir" or "irreg_ir" or "irreg_erstem":
+    if type == "er" or "ir" or "re" or "model" or "irreg_er" or "irreg_oir" or "irreg_ir" or "irreg_restem":
         je = inf + "ai"
         tu = inf + "as"
         il_elle = inf + "a"
@@ -558,20 +558,89 @@ def futurTense(inf, type):
     return je, tu, il_elle, nous, vous, ils_elles
 
 
-def conditionelpresentMood(inf, type):
-    return
+def conditionelpresentMood(inf):
 
-def plusqueparfaitTense(inf, type):
-    return
+    je = inf + "ais"
+    tu = inf + "ais"
+    il_elle = inf + "ait"
+    nous = inf + "ions"
+    vous = inf + "iez"
+    ils_elles = inf + "ont"
 
-def futuranterieurTense(inf, type):
-    return
+    return je, tu, il_elle, nous, vous, ils_elles
 
+# Plus-que-parfait Tense
+def plusqueparfaitTense(inf, type, subtype, reflexive):
+
+    if subtype or reflexive:
+        imparfaitEtre = imparfaitTense("etre", "irreg")
+        je = imparfaitEtre[0] + " " + pastParticipe(inf,type)
+        tu = imparfaitEtre[1] + " " + pastParticipe(inf,type)
+        il_elle = imparfaitEtre[2] + " " + pastParticipe(inf,type)
+        nous = imparfaitEtre[3] + " " + pastParticipe(inf,type)
+        vous = imparfaitEtre[4] + " " + pastParticipe(inf,type)
+        ils_elles = imparfaitEtre[5] + " " + pastParticipe(inf,type)
+    else:
+        impartfaitAvoir = imparfaitTense("avoir", "irreg")
+        je = imparfaitAvoir[0] + " " + pastParticipe(inf, type)
+        tu = imparfaitAvoir[1] + " " + pastParticipe(inf, type)
+        il_elle = imparfaitAvoir[2] + " " + pastParticipe(inf, type)
+        nous = imparfaitAvoir[3] + " " + pastParticipe(inf, type)
+        vous = imparfaitAvoir[4] + " " + pastParticipe(inf, type)
+        ils_elles = imparfaitAvoir[5] + " " + pastParticipe(inf, type)
+
+    return je, tu, il_elle, nous, vous, ils_elles
+
+# Future Anterieur Tense
+def futuranterieurTense(inf, type, subtype, reflexive):
+
+    if subtype or reflexive:
+        condEtre = conditionelpresentMood("etre", "irreg")
+        je = condEtre[0] + " " + pastParticipe(inf, type)
+        tu = condEtre[1] + " " + pastParticipe(inf, type)
+        il_elle = condEtre[2] + " " + pastParticipe(inf, type)
+        nous = condEtre[3] + " " + pastParticipe(inf, type)
+        vous = condEtre[4] + " " + pastParticipe(inf, type)
+        ils_elles = condEtre[5] + " " + pastParticipe(inf, type)
+    else:
+        condAvoir = conditionelpresentMood("avoir", "irreg")
+        je = condAvoir[0] + " " + pastParticipe(inf, type)
+        tu = condAvoir[1] + " " + pastParticipe(inf, type)
+        il_elle = condAvoir[2] + " " + pastParticipe(inf, type)
+        nous = condAvoir[3] + " " + pastParticipe(inf, type)
+        vous = condAvoir[4] + " " + pastParticipe(inf, type)
+        ils_elles = condAvoir[5] + " " + pastParticipe(inf, type)
+
+    return je, tu, il_elle, nous, vous, ils_elles
+
+
+# Subjontif
 def subjoctifTense(inf, type):
     return
 
-def passecomposeTense(inf, type, reflexive):
-    return
+
+# Passe Compose
+def passecomposeTense(inf, type, subtype, reflexive):
+
+    if subtype or reflexive:
+        etre = presentTense("etre","irreg")
+        je = etre[0] + pastParticipe(inf, type)
+        tu = etre[1] + pastParticipe(inf, type)
+        il_elle = etre[2] + pastParticipe(inf, type)
+        nous = etre[3] + pastParticipe(inf, type)
+        vous = etre[4] + pastParticipe(inf, type)
+        ils_elles = etre[5] + pastParticipe(inf, type)
+    else:
+        avoir = presentTense("avoir","irreg")
+        je = avoir[0] + pastParticipe(inf, type)
+        tu = avoir[1] + pastParticipe(inf, type)
+        il_elle = avoir[2] + pastParticipe(inf, type)
+        nous = avoir[3] + pastParticipe(inf, type)
+        vous = avoir[4] + pastParticipe(inf, type)
+        ils_elles = avoir[5] + pastParticipe(inf, type)
+
+    return je, tu, il_elle, nous, vous, ils_elles
+
 
 def passesimpleTense(inf, type):
     return
