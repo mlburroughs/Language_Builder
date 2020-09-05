@@ -8,8 +8,8 @@ Author: Michelle Burroughs
 def presentTense(inf, type):
 
     # Irregular verbs:
-    if type == irreg:
-        if inf == avoir:
+    if type == "irreg":
+        if inf == "avoir":
             je = "ai"
             tu = "as"
             il_elle = "a"
@@ -17,7 +17,7 @@ def presentTense(inf, type):
             vous = "avez"
             ils_elles = "ont"
 
-        if inf == etre:
+        if inf == "etre":
             je = "suis"
             tu = "es"
             il_elle = "e"
@@ -25,7 +25,7 @@ def presentTense(inf, type):
             vous = "etes"
             ils_elles = "sont"
 
-        if inf == aller:
+        if inf == "aller":
             je = "vais"
             tu = "vas"
             il_elle = "va"
@@ -33,7 +33,7 @@ def presentTense(inf, type):
             vous = "allez"
             ils_elles = "vont"
 
-        if inf == faire:
+        if inf == "faire":
             je = "fais"
             tu = "fais"
             il_elle = "fait"
@@ -41,160 +41,161 @@ def presentTense(inf, type):
             vous = "faites"
             ils_elles = "font"
 
-    if type == model:
-        if inf == vouloir:
-            je = veux
-            tu = veux
-            il_elle = veut
-            nous = voulons
-            vous = voulez
-            ils_elles = veulent
+    if type == "model":
+        if inf == "vouloir":
+            je = "veux"
+            tu = "veux"
+            il_elle = "veut"
+            nous = "voulons"
+            vous = "voulez"
+            ils_elles = "veulent"
 
-        if inf == pouvoir:
-            je = peux
-            tu = peux
-            il_elle = peut
-            nous = pouvons
-            vous = pouvez
-            ils_elles = peuvent
+        if inf == "pouvoir":
+            je = "peux"
+            tu = "peux"
+            il_elle = "peut"
+            nous = "pouvons"
+            vous = "pouvez"
+            ils_elles = "peuvent"
 
-        if inf == devoir:
-            je = dois
-            tu = dois
-            il_elle = doit
-            nous = devons
-            vous = devez
-            ils_elles = doivent
+        if inf == "devoir":
+            je = "dois"
+            tu = "dois"
+            il_elle = "doit"
+            nous = "devons"
+            vous = "devez"
+            ils_elles = "doivent"
 
-        if inf == savoir:
-            je = sais
-            tu = sais
-            il_elle = sait
-            nous = savons
-            vous = savez
-            ils_elles = savent
+        if inf == "savoir":
+            je = "sais"
+            tu = "sais"
+            il_elle = "sait"
+            nous = "savons"
+            vous = "savez"
+            ils_elles = "savent"
 
-    if type == irreg_er:
-        if inf == appeler:
-            je = appelle
-            tu = appelles
-            il_elle = appelle
-            nous = appelons
-            vous = appelez
-            ils_elles = appellent
+    if type == "irreg_g":
+        if inf == "manger":
+            je = "mange"
+            tu = "manges"
+            il_elle = "mange"
+            nous = "mangeons"
+            vous = "mangez"
+            ils_elles = "mangent"
 
-        if inf == manger:
-            je = mange
-            tu = manges
-            il_elle = mange
-            nous = mangeons
-            vous = mangez
-            ils_elles = mangent
+        if inf == "bouger":
+            je = "bouge"
+            tu = "bouges"
+            il_elle = "bouge"
+            nous = "bougeons"
+            vous = "bougez"
+            ils_elles = "bougent"
 
-        if inf == rappeler:
-            je = rappelle
-            tu = rappelles
-            il_elle = rappelle
-            nous = rappelons
-            vous = rappelez
-            ils_elles = rappellent
+        if inf == "corriger":
+            je = "corrige"
+            tu = "corriges"
+            il_elle = "corrige"
+            nous = "corrigeons"
+            vous = "corrigez"
+            ils_elles = "corrigent"
 
-        if inf == jeter:
-            je = jette
-            tu = jettes
-            il_elle = jette
-            nous = jetons
-            vous = jetez
-            ils_elles = jettent
+        if inf == "voyager":
+            je = "voyage"
+            tu = "voyages"
+            il_elle = "voyage"
+            nous = "voyageons"
+            vous = "voyagez"
+            ils_elles = "voyagent"
 
-        if inf == bouger:
-            je = bouge
-            tu = bouges
-            il_elle = bouge
-            nous = bougeons
-            vous = bougez
-            ils_elles = bougent
+    if type == "irreg_er":
+        if inf == "appeler":
+            je = "appelle"
+            tu = "appelles"
+            il_elle = "appelle"
+            nous = "appelons"
+            vous = "appelez"
+            ils_elles = "appellent"
 
-        if inf == corriger:
-            je = corrige
-            tu = corriges
-            il_elle = corrige
-            nous = corrigeons
-            vous = corrigez
-            ils_elles = corrigent
+        if inf == "rappeler":
+            je = "rappelle"
+            tu = "rappelles"
+            il_elle = "rappelle"
+            nous = "rappelons"
+            vous = "rappelez"
+            ils_elles = "rappellent"
 
-        if inf == voyager:
-            je = voyage
-            tu = voyages
-            il_elle = voyage
-            nous = voyageons
-            vous = voyagez
-            ils_elles = voyagent
+        if inf == "jeter":
+            je = "jette"
+            tu = "jettes"
+            il_elle = "jette"
+            nous = "jetons"
+            vous = "jetez"
+            ils_elles = "jettent"
 
-        if inf == rire:
-            je = ris
-            tu = ris
-            il_elle = rit
-            nous = rions
-            vous = riez
-            ils_elles = rient
+        if inf == "rire":
+            je = "ris"
+            tu = "ris"
+            il_elle = "rit"
+            nous = "rions"
+            vous = "riez"
+            ils_elles = "rient"
 
-        if inf == dire:
-            je = dis
-            tu = dis
-            il_elle = dit
-            nous = disons
-            vous = dites
-            ils_elles = disent
+        if inf == "dire":
+            je = "dis"
+            tu = "dis"
+            il_elle = "dit"
+            nous = "disons"
+            vous = "dites"
+            ils_elles = "disent"
 
-        if inf == ecrire:
-            je = ecris
-            tu = ecris
-            il_elle = ecrit
-            nous = ecrivons
-            vous = ecrivez
-            ils_elles = ecrivent
+        if inf == "ecrire":
+            je = "ecris"
+            tu = "ecris"
+            il_elle = "ecrit"
+            nous = "ecrivons"
+            vous = "ecrivez"
+            ils_elles = "ecrivent"
 
-        if inf == lire:
-            je = lis
-            tu = lis
-            il_elle = lit
-            nous = lisons
-            vous = lisez
-            ils_elles = lisent
+        if inf == "lire":
+            je = "lis"
+            tu = "lis"
+            il_elle = "lit"
+            nous = "lisons"
+            vous = "lisez"
+            ils_elles = "lisent"
 
-    if type == irreg_ir:
-        if inf == tenir:
-            je = tiens
-            tu = tiens
-            il_elle = tient
-            nous = tenons
-            vous = tenez
-            ils_elles = tiennent
+    if type == "irreg_ir":
+        if inf == "tenir":
+            je = "tiens"
+            tu = "tiens"
+            il_elle = "tient"
+            nous = "tenons"
+            vous = "tenez"
+            ils_elles = "tiennent"
 
-        if inf == venir:
-            je = viens
-            tu = viens
-            il_elle = vient
-            nous = venons
-            vous = venez
-            ils_elles = viennent
+        if inf == "venir":
+            je = "viens"
+            tu = "viens"
+            il_elle = "vient"
+            nous = "venons"
+            vous = "venez"
+            ils_elles = "viennent"
 
-        if inf == tenir:
-            je = tiens
-            tu = tiens
-            il_elle = tient
-            nous = tenons
-            vous = tenez
-            ils_elles = tiennent
+        if inf == "tenir":
+            je = "tiens"
+            tu = "tiens"
+            il_elle = "tient"
+            nous = "tenons"
+            vous = "tenez"
+            ils_elles = "tiennent"
 
-        if inf == ouvrir:
-            je = ouvre
-            tu = ouvres
-            il_elle = ouvre
-            nous = ouvrons
-            vous = ouvrez
-            ils_elles = ouvrent
+        if inf == "ouvrir":
+            je = "ouvre"
+            tu = "ouvres"
+            il_elle = "ouvre"
+            nous = "ouvrons"
+            vous = "ouvrez"
+            ils_elles = "ouvrent"
 
         if inf == couvrir:
             je = couvre
@@ -236,7 +237,7 @@ def presentTense(inf, type):
             vous = appartenez
             ils_elles = appartiennent
 
-    if type == irreg_oir:
+    if type == "irreg_oir":
         if inf == voir:
             je = vois
             tu = vois
@@ -253,7 +254,7 @@ def presentTense(inf, type):
             vous = recevez
             ils_elles = recoivent
 
-    if type == irreg_erstem:
+    if type == "irreg_erstem":
         if inf == prendre:
             je = prends
             tu = prends
@@ -351,7 +352,7 @@ def presentTense(inf, type):
             ils_elles = vivent
 
     # For all regular verbs:
-    if type == er:
+    if type == "er":
         root = inf[:-2]
         je = root + "e"
         tu = root + "es"
@@ -360,7 +361,7 @@ def presentTense(inf, type):
         vous = root + "ez"
         ils_elles = root + "ent"
 
-    if type == ir:
+    if type == "ir":
         root = inf[:-2]
         je = root + "is"
         tu = root + "is"
@@ -369,7 +370,7 @@ def presentTense(inf, type):
         vous = root + "issez"
         ils_elles = root + "issent"
 
-    if type == re:
+    if type == "re":
         root = inf[:-2]
         je = root + "s"
         tu = root + "s"
@@ -408,3 +409,182 @@ irregpp = {'acquerir': 'acquis','apprendre': 'appris','atteindre': 'atteint', 'a
            'pouvoir': 'pu', 'prendre': 'pris', 'produire': 'produit', 'recevoir': 'recu',
            'savoir': 'su', 'souffrir': 'souffert', 'suivre': 'suivi', 'tenir': 'tenu', 'venir': 'venu',
            'vivre': 'vecu', 'voir': 'vu', 'vouloir': 'voulu'}
+
+def imparfaitTense(inf, type):
+    if type == er or ir or re or model or irreg_er or irreg_oir or irreg_ir or irreg_erstem:
+        root = inf[:-2]
+        je = root + "ais"
+        tu = root + "ais"
+        il_elle = root + "ait"
+        nous = root + "ions"
+        vous = root + "iez"
+        ils_elles = root + "aient"
+
+    # Irregular verbs:
+    if type == irreg:
+        if inf == avoir:
+                je = "avais"
+                tu = "avais"
+                il_elle = "avait"
+                nous = "avions"
+                vous = "aviez"
+                ils_elles = "aient"
+
+        if inf == etre:
+                je = "etais"
+                tu = "etais"
+                il_elle = "etait"
+                nous = "etions"
+                vous = "etiez"
+                ils_elles = "etaient"
+
+        if inf == aller:
+                je = "allais"
+                tu = "allais"
+                il_elle = "allait"
+                nous = "allions"
+                vous = "alliez"
+                ils_elles = "allaient"
+
+        if inf == faire:
+                je = "faisais"
+                tu = "faisais"
+                il_elle = "faisait"
+                nous = "faisions"
+                vous = "faisiez"
+                ils_elles = "fasaient"
+
+    if type == irreg_ir:
+        root = inf[:-2]
+        je = root + "issais"
+        tu = root + "issais"
+        il_elle = root + "issait"
+        nous = root + "issions"
+        vous = root + "issiez"
+        ils_elles = root + "issaient"
+
+    if type == irreg_g:
+        if inf == manger:
+            je = mangeais
+            tu = mangesais
+            il_elle = mangeait
+            nous = mangions
+            vous = mangiez
+            ils_elles = mangeaient
+
+        if inf == bouger:
+            je = bouge
+            tu = bouges
+            il_elle = bouge
+            nous = bougeons
+            vous = bougez
+            ils_elles = bougent
+
+        if inf == corriger:
+            je = corrige
+            tu = corriges
+            il_elle = corrige
+            nous = corrigeons
+            vous = corrigez
+            ils_elles = corrigent
+
+        if inf == voyager:
+            je = voyage
+            tu = voyages
+            il_elle = voyage
+            nous = voyageons
+            vous = voyagez
+            ils_elles = voyagent
+
+    return je, tu, il_elle, nous, vous, ils_elles
+
+
+def futurprocheTense(inf, type):
+    first = presentTense(aller, irreg)
+    je = first[0] + " " + inf
+    tu = first[1] + " " + inf
+    il_elle = first[2] + " " + inf
+    nous = first[3] + " " + inf
+    vous = first[4] + " " + inf
+    ils_elles = first[5] + " " + inf
+
+    return je, tu, il_elle, nous, vous, ils_elles
+
+
+def futurTense(inf, type):
+
+    if type == er or ir or re or model or irreg_er or irreg_oir or irreg_ir or irreg_erstem:
+        je = inf + "ai"
+        tu = inf + "as"
+        il_elle = inf + "a"
+        nous = inf + "ons"
+        vous = inf + "ez"
+        ils_elles = inf + "ont"
+
+    # Irregular verbs:
+    if type == irreg:
+        if inf == avoir:
+                je = "aurai"
+                tu = "auras"
+                il_elle = "aura"
+                nous = "aurons"
+                vous = "aurez"
+                ils_elles = "auront"
+
+        if inf == etre:
+                je = "serai"
+                tu = "seras"
+                il_elle = "sera"
+                nous = "serons"
+                vous = "serez"
+                ils_elles = "seront"
+
+        if inf == aller:
+                je = "irai"
+                tu = "iras"
+                il_elle = "ira"
+                nous = "irons"
+                vous = "irez"
+                ils_elles = "iront"
+
+        if inf == faire:
+                je = "ferai"
+                tu = "feras"
+                il_elle = "fera"
+                nous = "ferons"
+                vous = "ferez"
+                ils_elles = "feront"
+
+    return je, tu, il_elle, nous, vous, ils_elles
+
+
+def conditionelpresentMood(inf, type):
+    return
+
+def plusqueparfaitTense(inf, type):
+    return
+
+def futuranterieurTense(inf, type):
+    return
+
+def subjoctifTense(inf, type):
+    return
+
+def passecomposeTense(inf, type, reflexive):
+    return
+
+def passesimpleTense(inf, type):
+    return
+
+def imperatifMood(inf, type):
+    return
+
+def participeMood(inf, type):
+
+    return
+
+def indicatifMood(inf, type):
+
+    return
+
+print(presentTense("avoir", "irreg"))
