@@ -710,11 +710,11 @@ def participepresentMood(inf, type):
         root = inf[:-2]
         participepresent = root +"issant"
     elif type == "irreg":
-        if inf = "etre":
+        if inf == "etre":
             participepresent = etant
-        elif inf = "avoir":
+        elif inf == "avoir":
             participepresent = ayant
-        elif inf = "savoir":
+        elif inf == "savoir":
             participepresent = sachant
     else:
         root = inf[:-2]
